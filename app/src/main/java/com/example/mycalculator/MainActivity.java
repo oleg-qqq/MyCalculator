@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
     Boolean isNew = true;
     String operator;
     String oldNumber;
-
+    Boolean isDot = true;
+    Boolean isPlusMinus = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +44,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.button8: number = number+"8"; break;
             case R.id.button9: number = number+"9"; break;
             case R.id.button0: number = number+"0"; break;
-            case R.id.buttonDot: number = number+"."; break;
-            case R.id.buttonPlusMinus: number = "-"+number; break;
+            case R.id.buttonDot:
+                if (isDot){     //Убираем возможность поставить точку более 1 раза//
+                    number = number+".";
+                    isDot = false;
+                }
+                break;
+            case R.id.buttonPlusMinus: //Добавляем возможность менять "-" на "+"
+                if (number.charAt(0) == '-'){
+                    number = number.substring(1); //Функция оставляет только значения с 1го знака
+                }else {
+                    number = "-"+number;
+                }
+                 break;
         }
 //Выводим во вью editText значение number
         editText.setText(number);
@@ -53,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
     public void operation(View view) {
 // Меняем переменную isNew на true чтобы при наборе следующего числа было установлено во вью пустое значение
        isNew = true;
+       isDot = true;
+       Boolean isPlusMinus = true;
 //В переменную oldNumber записываем число, кот. ввели первым
         oldNumber = editText.getText().toString();
         switch (view.getId()){
@@ -80,5 +94,12 @@ public class MainActivity extends AppCompatActivity {
     public void clickC(View view) {
         editText.setText("0");
         isNew = true; // Избавляемся от нуля при следующем вводе цифр
+    }
+//Реализовано удаление по одному символу
+    public void clickDelete(View view) {
+        String number = editText.getText().toString();
+        number = number.substring(0,number.length()-1);
+
+        editText.setText(number);
     }
 }

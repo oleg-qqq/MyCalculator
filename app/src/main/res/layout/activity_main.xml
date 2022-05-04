@@ -73,7 +73,7 @@
             android:backgroundTint="@color/ColorButtons"
             android:fontFamily="@font/atomic_age"
             android:gravity="center"
-            android:onClick="clickNumber"
+            android:onClick="clickDelete"
             android:text="@string/_del"
             android:textSize="@dimen/key_text_size"
             android:textStyle="bold"
