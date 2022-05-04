@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#C5B8B8</color>
-    <color name="ColorButtons">#989C27B0</color>
-    <color name="ColorEditText">#FA9C27B0</color>
+    <color name="ColorButtons">#B99C27B0</color>
+    <color name="ColorEditText">#CC9C27B0</color>
+    <color name="TextColor">#010100</color>
+    <color name="ColorContur">#FFFFFF</color>
 </resources>

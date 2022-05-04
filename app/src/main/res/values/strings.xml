@@ -16,4 +16,11 @@
     <string name="_minus">-</string>
     <string name="_div">/</string>
     <string name="_mil">*</string>
+    <string name="_C">C</string>
+    <string name="_del">Del</string>
+    <string name="_PlusMinus">+/-</string>
+    <string name="_Persent">%</string>
+
+
+    />
 </resources>
