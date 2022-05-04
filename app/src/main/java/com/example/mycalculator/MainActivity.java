@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         editText.setText("0");
         isNew = true; // Избавляемся от нуля при следующем вводе цифр
     }
-//Реализовано удаление по одному символу
+// Реализовано удаление по одному символу
     public void clickDelete(View view) {
         String number = editText.getText().toString();
         number = number.substring(0,number.length()-1);
