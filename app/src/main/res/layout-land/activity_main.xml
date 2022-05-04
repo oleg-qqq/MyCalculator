@@ -19,7 +19,7 @@
         android:layout_weight="1"
         android:background="@color/ColorEditText"
         android:gravity="right|center"
-        android:hint="0"
+        android:text="0"
         android:minHeight="70dp"
         android:textSize="48sp"
         />
@@ -88,7 +88,7 @@
             android:backgroundTint="@color/ColorButtons"
             android:fontFamily="@font/atomic_age"
             android:gravity="center"
-            android:onClick="clickNumber"
+            android:onClick="clickC"
             android:text="@string/_C"
             android:textSize="@dimen/TextSizeLandscape"
             android:textStyle="bold"
@@ -163,7 +163,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
             />
     </LinearLayout>
@@ -233,7 +233,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
 
             />
@@ -304,7 +304,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
             />
     </LinearLayout>
@@ -351,17 +351,16 @@
             android:id="@+id/buttonRes"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
             android:layout_margin="@dimen/MarginLandscape"
             android:layout_weight="1"
-            android:text="@string/_res"
-            android:textSize="@dimen/TextSizeLandscape"
-            android:gravity="center"
-            android:textStyle="bold"
+            android:backgroundTint="@color/ColorButtons"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:gravity="center"
+            android:onClick="clickResult"
+            android:text="@string/_res"
             android:textColor="@color/ColorContur"
-            />
+            android:textSize="@dimen/TextSizeLandscape"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonPlus"
@@ -375,7 +374,7 @@
             android:gravity="center"
             android:fontFamily="@font/atomic_age"
             android:textStyle="bold"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
             />
 

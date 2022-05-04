@@ -19,7 +19,7 @@
         android:layout_weight="1"
         android:background="@color/ColorEditText"
         android:gravity="right|center"
-        android:hint="0"
+        android:text="0"
         android:minHeight="70dp"
         android:textSize="48sp"
         />
@@ -88,7 +88,7 @@
             android:backgroundTint="@color/ColorButtons"
             android:fontFamily="@font/atomic_age"
             android:gravity="center"
-            android:onClick="clickNumber"
+            android:onClick="clickC"
             android:text="@string/_C"
             android:textSize="@dimen/key_text_size"
             android:textStyle="bold"
@@ -163,8 +163,9 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
+
             />
     </LinearLayout>
 
@@ -233,7 +234,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
 
             />
@@ -304,7 +305,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
             />
     </LinearLayout>
@@ -359,7 +360,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/atomic_age"
-            android:onClick="clickNumber"
+            android:onClick="clickResult"
             android:textColor="@color/ColorContur"
             />
 
@@ -375,7 +376,7 @@
             android:gravity="center"
             android:fontFamily="@font/atomic_age"
             android:textStyle="bold"
-            android:onClick="clickNumber"
+            android:onClick="operation"
             android:textColor="@color/ColorContur"
             />
 
