@@ -10,7 +10,7 @@ import android.widget.RadioGroup;
 
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 //Объявляем переменные
     EditText editText;
     Boolean isNew = true;
@@ -19,25 +19,13 @@ public class MainActivity extends AppCompatActivity {
     Boolean isDot = true;
     Boolean isPlusMinus = true;
 
-    //Имя настроек
-    private static final String NameSharedPreference = "LOGIN";
-    // Имя параметра в настройках
-    private static final String DayTheme = "APP_THEME";
-    private static final int DayThemeCodeStyle = 0;
-    private static final int NightThemeCodeStyle = 1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-// Устанавливать тему надо только до установки макета активити
-        setTheme(getAppTheme(R.style.DayTheme));
         setContentView(R.layout.activity_main);
         initThemeChooser();
-
-
 //Получаем ID вью editText
         editText = findViewById(R.id.editText);
-
     }
 //Реализуем нажатия на цифры.
     public void clickNumber(View view) {
@@ -118,8 +106,6 @@ public class MainActivity extends AppCompatActivity {
 
         editText.setText(number);
     }
-
-
     // Инициализация радиокнопок
    private void initThemeChooser(){
         initRadioButton(findViewById(R.id.radioButtonDay),
@@ -130,48 +116,19 @@ public class MainActivity extends AppCompatActivity {
         ((MaterialRadioButton)rg.getChildAt(getCodeStyle(DayThemeCodeStyle))).setChecked(true);
     }
 
-    // Все инициализации кнопок очень похожи, поэтому создадим метод для переиспользования
+// Все инициализации кнопок очень похожи, поэтому создадим метод для переиспользования
     private void initRadioButton(View button, final int codeStyle){
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-// сохраним настройки
+//Сохраним настройки
                 setAppTheme(codeStyle);
-// пересоздадим активити, чтобы тема применилась
+//Пересоздадим активити, чтобы тема применилась
                 recreate();
             }
         });
     }
 
 
-    private int getAppTheme(int codeStyle) {
-        return codeStyleToStyleId(getCodeStyle(codeStyle));
-    }
-// Чтение настроек, параметр «тема»
-    private int getCodeStyle(int codeStyle){
-// Работаем через специальный класс сохранения и чтения настроек
-        SharedPreferences sharedPref = getSharedPreferences(NameSharedPreference,
-                MODE_PRIVATE);
-//Прочитать тему, если настройка не найдена - взять по умолчанию
-        return sharedPref.getInt(DayTheme, codeStyle);
-    }
-// Сохранение настроек
-    private void setAppTheme(int codeStyle) {
-        SharedPreferences sharedPref = getSharedPreferences(NameSharedPreference,
-                MODE_PRIVATE);
-// Настройки сохраняются посредством специального класса editor.
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(DayTheme, codeStyle);
-        editor.apply();
-    }
-    private int codeStyleToStyleId(int codeStyle){
-        switch(codeStyle){
-            case DayThemeCodeStyle:
-                return R.style.DayTheme;
-            case NightThemeCodeStyle:
-                return R.style.NightTheme;
-            default:
-                return R.style.DayTheme;
-        }
-    }
+
 }
