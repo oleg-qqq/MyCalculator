@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@drawable/picture"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:theme="@style/MyStyle"
+    >
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="343dp" />
+        android:layout_height="383dp" />
 
     <EditText
         android:id="@+id/editText"
