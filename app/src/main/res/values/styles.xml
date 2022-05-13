@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="MyStyle" parent="Theme.Material3.Dark">
+    <style name="DayTheme" parent="Theme.Material3.Dark.NoActionBar">
         <item name="android:textSize">@dimen/key_text_size</item>
         <item name="android:textColor">@color/TextColor</item>
         <item name="android:layout_margin">@dimen/margin_small</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NightTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:textSize">@dimen/key_text_size</item>
+        <item name="android:textColor">@color/TextColorBlack</item>
+        <item name="android:layout_margin">@dimen/margin_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint">@color/ColorButtonsBlackTheme</item>
+        <item name="android:fontFamily">@font/atomic_age</item>
+        <item name="android:colorPrimary">@color/black</item>
+        <item name="android:colorPrimaryDark">@color/black</item>
     </style>
 </resources>

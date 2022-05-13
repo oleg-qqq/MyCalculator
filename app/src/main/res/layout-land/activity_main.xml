@@ -4,25 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@drawable/picture"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:theme="@style/DayTheme"
+    tools:context=".MainActivity">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/editText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/ColorEditText"
-        android:gravity="right|center"
-        android:text="0"
-        android:minHeight="70dp"
-        android:textSize="48sp"
-        />
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DayTheme" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/NightTheme" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/ColorEditText"
+            android:gravity="right|center"
+            android:minHeight="70dp"
+            android:text="0"
+            android:textSize="48sp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,66 +55,62 @@
             android:id="@+id/buttonPersent"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:hapticFeedbackEnabled="false"
             android:includeFontPadding="false"
             android:onClick="clickNumber"
+            android:shadowColor="#FFFFFF"
             android:text="@string/_Persent"
             android:textAllCaps="false"
-            android:textSize="@dimen/TextSizeLandscape"
-            android:textStyle="bold"
-            android:textColor="@color/ColorContur"
-            />
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonPlusMinus"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:onClick="clickNumber"
             android:text="@string/_PlusMinus"
-            android:textSize="@dimen/TextSizeLandscape"
-            android:textStyle="bold"
-            android:textColor="@color/ColorContur"/>
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
 
         <Button
             android:id="@+id/buttonDel"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:onClick="clickDelete"
             android:text="@string/_del"
-            android:textSize="@dimen/TextSizeLandscape"
-            android:textStyle="bold"
-            android:textColor="@color/ColorContur"/>
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonС"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:onClick="clickC"
             android:text="@string/_C"
-            android:textSize="@dimen/TextSizeLandscape"
-            android:textStyle="bold"
-            android:textColor="@color/ColorContur"/>
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,10 +122,9 @@
             android:id="@+id/button1"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:hapticFeedbackEnabled="false"
             android:includeFontPadding="false"
@@ -115,56 +132,52 @@
             android:text="@string/_1"
             android:textAllCaps="false"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:textSize="@dimen/key_text_size"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:text="@string/_2"
-            android:textSize="@dimen/TextSizeLandscape"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_2"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
 
         <Button
             android:id="@+id/button3"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
-            android:backgroundTint="@color/ColorButtons"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_3"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_3"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonDiv"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
-            android:backgroundTint="@color/ColorButtons"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_div"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
+            android:text="@string/_div"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold"
+
             />
     </LinearLayout>
 
@@ -177,64 +190,57 @@
             android:id="@+id/button4"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
-            android:backgroundTint="@color/ColorButtons"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_4"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_4"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_5"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_5"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_6"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_6"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonMil"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_mil"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
+            android:text="@string/_mil"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold"
 
             />
     </LinearLayout>
@@ -248,65 +254,57 @@
             android:id="@+id/button7"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_7"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_7"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_8"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_8"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button9"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_9"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_9"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonMinus"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_minus"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
-            />
+            android:text="@string/_minus"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -318,65 +316,58 @@
             android:id="@+id/button0"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_0"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_0"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonDot"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_dot"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
+            android:text="@string/_dot"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
 
             android:id="@+id/buttonRes"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:onClick="clickResult"
             android:text="@string/_res"
-            android:textColor="@color/ColorContur"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonPlus"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/MarginLandscape"
+            android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_plus"
-            android:textSize="@dimen/TextSizeLandscape"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:fontFamily="@font/atomic_age"
-            android:textStyle="bold"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
-            />
+            android:text="@string/_plus"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

@@ -7,24 +7,42 @@
     tools:context=".MainActivity"
     android:background="@drawable/picture"
     android:orientation="vertical"
-    android:theme="@style/MyStyle"
+    android:theme="@style/DayTheme"
     >
+
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/DayTheme" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonNight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/NightTheme" />
+    </RadioGroup>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="383dp" />
+        android:layout_height="286dp"
+        android:layout_weight="1" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:background="@color/ColorEditText"
         android:gravity="right|center"
-        android:text="0"
         android:minHeight="70dp"
-        android:textSize="48sp"
-        />
+        android:text="0"
+        android:textSize="48sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,17 +56,16 @@
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:hapticFeedbackEnabled="false"
             android:includeFontPadding="false"
             android:onClick="clickNumber"
+            android:shadowColor="#FFFFFF"
             android:text="@string/_Persent"
             android:textAllCaps="false"
+            android:textColor="@color/TextColor"
             android:textSize="@dimen/key_text_size"
-            android:textStyle="bold"
-            android:textColor="@color/ColorContur"
-            />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonPlusMinus"
@@ -57,13 +74,12 @@
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:onClick="clickNumber"
             android:text="@string/_PlusMinus"
             android:textSize="@dimen/key_text_size"
             android:textStyle="bold"
-            android:textColor="@color/ColorContur"/>
+            android:textColor="@color/TextColor"/>
 
 
         <Button
@@ -73,13 +89,12 @@
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:onClick="clickDelete"
             android:text="@string/_del"
             android:textSize="@dimen/key_text_size"
             android:textStyle="bold"
-            android:textColor="@color/ColorContur"/>
+            android:textColor="@color/TextColor"/>
 
         <Button
             android:id="@+id/buttonС"
@@ -88,13 +103,12 @@
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:onClick="clickC"
             android:text="@string/_C"
             android:textSize="@dimen/key_text_size"
             android:textStyle="bold"
-            android:textColor="@color/ColorContur"/>
+            android:textColor="@color/TextColor"/>
     </LinearLayout>
 
     <LinearLayout
@@ -109,7 +123,6 @@
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:fontFamily="@font/atomic_age"
             android:gravity="center"
             android:hapticFeedbackEnabled="false"
             android:includeFontPadding="false"
@@ -118,7 +131,8 @@
             android:textAllCaps="false"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/key_text_size"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
         <Button
             android:id="@+id/button2"
@@ -131,7 +145,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -148,7 +161,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -164,9 +176,8 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
+            android:textColor="@color/TextColor"
 
             />
     </LinearLayout>
@@ -187,7 +198,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -203,7 +213,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -219,7 +228,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -235,9 +243,8 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
+            android:textColor="@color/TextColor"
 
             />
     </LinearLayout>
@@ -258,7 +265,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -274,7 +280,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -290,7 +295,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -306,9 +310,8 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
+            android:textColor="@color/TextColor"
             />
     </LinearLayout>
 
@@ -328,7 +331,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -344,7 +346,6 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickNumber"
             android:textColor="@color/TextColor"
             />
@@ -361,9 +362,8 @@
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/atomic_age"
             android:onClick="clickResult"
-            android:textColor="@color/ColorContur"
+            android:textColor="@color/TextColor"
             />
 
         <Button
@@ -376,10 +376,9 @@
             android:text="@string/_plus"
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
-            android:fontFamily="@font/atomic_age"
             android:textStyle="bold"
             android:onClick="operation"
-            android:textColor="@color/ColorContur"
+            android:textColor="@color/TextColor"
             />
 
     </LinearLayout>
