@@ -2,11 +2,15 @@ package com.example.mycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.material.radiobutton.MaterialRadioButton;
+
+public class MainActivity extends BaseActivity {
 //Объявляем переменные
     EditText editText;
     Boolean isNew = true;
@@ -19,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initThemeChooser();
 //Получаем ID вью editText
         editText = findViewById(R.id.editText);
-
     }
 //Реализуем нажатия на цифры.
     public void clickNumber(View view) {
@@ -102,4 +106,29 @@ public class MainActivity extends AppCompatActivity {
 
         editText.setText(number);
     }
+    // Инициализация радиокнопок
+   private void initThemeChooser(){
+        initRadioButton(findViewById(R.id.radioButtonDay),
+                DayThemeCodeStyle);
+        initRadioButton(findViewById(R.id.radioButtonNight),
+                NightThemeCodeStyle);
+        RadioGroup rg = findViewById(R.id.radioButtons);
+        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(DayThemeCodeStyle))).setChecked(true);
+    }
+
+// Все инициализации кнопок очень похожи, поэтому создадим метод для переиспользования
+    private void initRadioButton(View button, final int codeStyle){
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//Сохраним настройки
+                setAppTheme(codeStyle);
+//Пересоздадим активити, чтобы тема применилась
+                recreate();
+            }
+        });
+    }
+
+
+
 }

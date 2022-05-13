@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="key_text_size">30sp</dimen>
-    <dimen name="margin_small">3dp</dimen>
-    <dimen name="TextSizeLandscape">20sp</dimen>
+    <dimen name="key_text_size">20sp</dimen>
+    <dimen name="margin_small">2dp</dimen>
+    <dimen name="TextSizeLandscape">15sp</dimen>
     <dimen name="MarginLandscape">1dp</dimen>
+    <dimen name="HighButtomLandscape">20pt</dimen>
 </resources>
