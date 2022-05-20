@@ -1,30 +1,29 @@
 <resources>
     <string name="app_name">My Calculator</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_4">4</string>
-    <string name="_5">5</string>
-    <string name="_6">6</string>
-    <string name="_7">7</string>
-    <string name="_8">8</string>
-    <string name="_9">9</string>
-    <string name="_0">0</string>
-    <string name="_dot">.</string>
-    <string name="_res">=</string>
-    <string name="_plus">+</string>
-    <string name="_minus">-</string>
-    <string name="_div">/</string>
-    <string name="_mil">*</string>
-    <string name="_C">C</string>
-    <string name="_del">Del</string>
-    <string name="_PlusMinus">+/-</string>
-    <string name="_Persent">%</string>
-
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="_9" translatable="false">9</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_dot" translatable="false">.</string>
+    <string name="_res" translatable="false">=</string>
+    <string name="_plus" translatable="false">+</string>
+    <string name="_minus" translatable="false">-</string>
+    <string name="_div" translatable="false">/</string>
+    <string name="_mil" translatable="false">*</string>
+    <string name="_C" translatable="false">C</string>
+    <string name="_del" translatable="false">Del</string>
+    <string name="_PlusMinus" translatable="false">+/-</string>
+    <string name="_Persent" translatable="false">%</string>
+    <string name="ThemeChangeToast">Theme has been changed</string>
+    <string name="ErrorToast">Division by Zero!</string>
+    <string name="SettingsButton">Settings</string>
     <string name="DayTheme">Day Theme</string>
     <string name="NightTheme">Night Theme</string>
-    <string name="ErrorToast">Division by ZERO</string>
-    <string name="ThemeChangeToast">Theme has been changed</string>
-    <string name="SettingsButton">Settings</string>
 
 </resources>

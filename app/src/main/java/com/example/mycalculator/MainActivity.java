@@ -13,24 +13,25 @@ public class MainActivity extends BaseActivity{
     Boolean isNew = true;
     String operator = "";
     String oldNumber;
-
+    Boolean ID = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        //if(ID) {
+            ID = false;
+            //Получаем данные из SettingsActivity
+            Intent intent = getIntent();
+            int them = intent.getIntExtra("theme", 0);
 
-    //Получаем данные из SettingsActivity
-        Intent intent = getIntent();
-        int them = intent.getIntExtra("theme",0);
+            if (intent.hasExtra("theme")) {
 
-        if (intent.hasExtra("theme")) {
-
-            Toast.makeText(this, R.string.ThemeChangeToast, Toast.LENGTH_SHORT).show();
-            setAppTheme(them);
-            recreate();
-        }
-
+                 Toast.makeText(this, R.string.ThemeChangeToast, Toast.LENGTH_SHORT).show();
+                setAppTheme(them);
+                recreate();
+            }
+       // }
     //Получаем ID вью editText
         editText = findViewById(R.id.editText);
     }

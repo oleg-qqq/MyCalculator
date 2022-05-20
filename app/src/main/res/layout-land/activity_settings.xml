@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral20"
     android:orientation="vertical"
     android:theme="@style/DayTheme"
     tools:context=".SettingsActivity">
@@ -20,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_small"
             android:gravity="center"
-            android:text="@string/SettingsButton"
+            android:text="Setting"
             android:textSize="48sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,13 +43,13 @@
                 android:id="@+id/radioButtonDay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/DayTheme" />
+                android:text="DayTheme" />
 
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/radioButtonNight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/NightTheme" />
+                android:text="NightTheme" />
 
         </RadioGroup>
     </LinearLayout>
