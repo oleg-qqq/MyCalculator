@@ -28,44 +28,25 @@ public class MainActivity extends BaseActivity{
     String oldNumber;
     Boolean isDot = true;
     Boolean isPlusMinus = true;
-   //int CodeStyle = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       //int CodeStyle = getIntent().getExtra().getParcelable(CODE_THEME);
-        //Toast.makeText(this, CodeStyle, Toast.LENGTH_SHORT).show();
 
+        Intent themeIntent = getIntent();
+        if (themeIntent.hasExtra("themeID")) {
+            Toast.makeText(this, "Theme Changed", Toast.LENGTH_SHORT).show();
+            String Code = themeIntent.getStringExtra("themeID");
+            int finalCodeStyle = Integer.parseInt(Code);
+            setAppTheme(finalCodeStyle);
+            recreate();
 
-//
-//        String
-//        int CodeStyle = Integer.parseInt(CodeStyle1);
-//        setAppTheme(CodeStyle);
-//            recreate();
+        }
         setContentView(R.layout.activity_main);
-       // Intent themeIntent = getIntent();
-       // String codeStyle = themeIntent.getStringExtra("themeID");
-
-        //Toast.makeText(this, codeStyle, Toast.LENGTH_SHORT).show();
-
-
-
 
         //Получаем ID вью editText
         editText = findViewById(R.id.editText);
     }
-
-//    public void Theme() {
-//
-//        Intent themeIntent = getIntent();
-//     String CodeStyle1 = themeIntent.getStringExtra("themeID");
-//    int CodeStyle = Integer.parseInt(CodeStyle1);
-//
-//       if (themeIntent.hasExtra("themeID")){
-//            setAppTheme(CodeStyle);
-//            recreate();
-//        }else {Toast.makeText(this, "No Code Style", Toast.LENGTH_LONG).show();}
-//        setContentView(R.layout.activity_main);
-//    }
 
     //Реализуем нажатия на цифры.
     public void clickNumber(View view) {
@@ -126,8 +107,6 @@ public class MainActivity extends BaseActivity{
         editText.setText(number);
     }
 
-
-
     //Выбираем матем-ое действие
     public void operation(View view) {
 // Меняем переменную isNew на true чтобы при наборе следующего числа было установлено во вью пустое значение
@@ -172,7 +151,6 @@ public class MainActivity extends BaseActivity{
                 break;
         }
         editText.setText(result + "");
-
     }
 
     //Добавили функционал кнопки сброса значений
@@ -193,7 +171,5 @@ public class MainActivity extends BaseActivity{
         Intent runSettings = new Intent(MainActivity.this, SettingsActivity.class);
 
         startActivity(runSettings);
-
-
     }
 }

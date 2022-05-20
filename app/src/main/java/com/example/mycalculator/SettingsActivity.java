@@ -13,12 +13,11 @@ public class SettingsActivity extends BaseActivity {
 Integer CodeStyle;
     Context context = SettingsActivity.this;
     Class DestinationActivity = MainActivity.class;
-
+    int newTheme;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
         initThemeChooser();
     }
 
@@ -37,22 +36,25 @@ Integer CodeStyle;
             @Override
             public void onClick(View v) {
 
+                if (codeStyle == 0){
+                    Toast.makeText(context, "Now is Day Theme", Toast.LENGTH_SHORT).show();
+                    theme(codeStyle);
+                }else if (codeStyle == 1){
+                    Toast.makeText(context, "Now is Night Theme", Toast.LENGTH_SHORT).show();
+                    theme(codeStyle);
+                }
 //Сохраним настройки
                 setAppTheme(codeStyle);
-//                Intent themeIntent = new Intent(context, DestinationActivity);
-//                themeIntent.putExtra("themeID", codeStyle);
                 recreate();
-//                Toast.makeText(context, codeStyle, Toast.LENGTH_SHORT).show();
-
-//                Toast.makeText(context, codeStyle, Toast.LENGTH_LONG).show();
-
             }
         });
     }
-
-    public void ButtonReturn(View view) {
-        Toast.makeText(context, "Return", Toast.LENGTH_SHORT).show();
+    //Метод передачи темы в MainActivity и переход на главный экран
+    public void theme(int codeStyle) {
+        newTheme = codeStyle;
         Intent runMain = new Intent(context, MainActivity.class);
+        Intent themeIntent = new Intent(context, DestinationActivity);
+        themeIntent.putExtra("themeID", newTheme);
         startActivity(runMain);
     }
 }
