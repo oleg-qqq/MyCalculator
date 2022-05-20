@@ -10,27 +10,16 @@
     android:theme="@style/DayTheme"
     >
 
-    <RadioGroup
-        android:id="@+id/radioButtons"
+    <Button
+        android:id="@+id/button666"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonDay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/DayTheme" />
-
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonNight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/NightTheme" />
-    </RadioGroup>
+        android:layout_height="wrap_content"
+        android:onClick="goSettings"
+        android:text="Settings" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="286dp"
+        android:layout_height="423dp"
         android:layout_weight="1" />
 
     <EditText
