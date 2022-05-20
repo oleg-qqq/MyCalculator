@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
@@ -36,17 +35,12 @@ Integer CodeStyle;
             @Override
             public void onClick(View v) {
 
-
 //Сохраним настройки и передадим в MainActivity информацию о теме + сделаем переход на главный экран
                 setAppTheme(codeStyle);
                 recreate();
-                //String cod = String.valueOf(codeStyle);
                 Intent intent = new Intent(context, MainActivity.class);
                 intent.putExtra("theme", codeStyle);
                 startActivity(intent);
-
-
-
             }
         });
     }

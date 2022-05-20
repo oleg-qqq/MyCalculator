@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Calculator</string>
+    <string name="app_name">Мой калькулятор</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
     <string name="_3">3</string>
@@ -21,10 +21,10 @@
     <string name="_PlusMinus">+/-</string>
     <string name="_Persent">%</string>
 
-    <string name="DayTheme">Day Theme</string>
-    <string name="NightTheme">Night Theme</string>
-    <string name="ErrorToast">Division by ZERO</string>
-    <string name="ThemeChangeToast">Theme has been changed</string>
-    <string name="SettingsButton">Settings</string>
+    <string name="DayTheme">Дневная тема</string>
+    <string name="NightTheme">Ночная тема</string>
+    <string name="ErrorToast">Деление на ноль!</string>
+    <string name="ThemeChangeToast">Тема была изменена</string>
+    <string name="SettingsButton">Настройки</string>
 
 </resources>

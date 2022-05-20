@@ -48,13 +48,14 @@
             android:gravity="center"
             android:hapticFeedbackEnabled="false"
             android:includeFontPadding="false"
-            android:onClick="clickNumber"
+            android:onClick="clickPercent"
             android:shadowColor="#FFFFFF"
             android:text="@string/_Persent"
             android:textAllCaps="false"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/key_text_size"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
         <Button
             android:id="@+id/buttonPlusMinus"
@@ -105,54 +106,48 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button7"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:hapticFeedbackEnabled="false"
-            android:includeFontPadding="false"
             android:onClick="clickNumber"
-            android:text="@string/_1"
-            android:textAllCaps="false"
+            android:text="@string/_7"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/key_text_size"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button8"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:backgroundTint="@color/ColorButtons"
-            android:text="@string/_2"
-            android:textSize="@dimen/key_text_size"
             android:gravity="center"
-            android:textStyle="bold"
             android:onClick="clickNumber"
+            android:text="@string/_8"
             android:textColor="@color/TextColor"
-            />
-
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button9"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_small"
-            android:backgroundTint="@color/ColorButtons"
             android:layout_weight="1"
-            android:text="@string/_3"
-            android:textSize="@dimen/key_text_size"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
             android:onClick="clickNumber"
+            android:text="@string/_9"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonDiv"
@@ -169,6 +164,7 @@
             android:textColor="@color/TextColor"
 
             />
+
     </LinearLayout>
 
     <LinearLayout
@@ -244,49 +240,49 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/button1"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_7"
-            android:textSize="@dimen/key_text_size"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
+            android:hapticFeedbackEnabled="false"
+            android:includeFontPadding="false"
             android:onClick="clickNumber"
+            android:text="@string/_1"
+            android:textAllCaps="false"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/button2"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_8"
-            android:textSize="@dimen/key_text_size"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
             android:onClick="clickNumber"
+            android:text="@string/_2"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/button3"
             android:layout_width="0pt"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
-            android:text="@string/_9"
-            android:textSize="@dimen/key_text_size"
+            android:backgroundTint="@color/ColorButtons"
             android:gravity="center"
-            android:textStyle="bold"
             android:onClick="clickNumber"
+            android:text="@string/_3"
             android:textColor="@color/TextColor"
-            />
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonMinus"
@@ -302,12 +298,27 @@
             android:onClick="operation"
             android:textColor="@color/TextColor"
             />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonDot"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_weight="1"
+            android:backgroundTint="@color/ColorButtons"
+            android:gravity="center"
+            android:onClick="clickNumber"
+            android:text="@string/_dot"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/key_text_size"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button0"
@@ -317,21 +328,6 @@
             android:layout_margin="@dimen/margin_small"
             android:layout_weight="1"
             android:text="@string/_0"
-            android:textSize="@dimen/key_text_size"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:onClick="clickNumber"
-            android:textColor="@color/TextColor"
-            />
-
-        <Button
-            android:id="@+id/buttonDot"
-            android:layout_width="0pt"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/ColorButtons"
-            android:layout_margin="@dimen/margin_small"
-            android:layout_weight="1"
-            android:text="@string/_dot"
             android:textSize="@dimen/key_text_size"
             android:gravity="center"
             android:textStyle="bold"
