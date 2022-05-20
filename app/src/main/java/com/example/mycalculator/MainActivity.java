@@ -33,16 +33,18 @@ public class MainActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent themeIntent = getIntent();
-        if (themeIntent.hasExtra("themeID")) {
-            Toast.makeText(this, "Theme Changed", Toast.LENGTH_SHORT).show();
-            String Code = themeIntent.getStringExtra("themeID");
-            int finalCodeStyle = Integer.parseInt(Code);
-            setAppTheme(finalCodeStyle);
-            recreate();
-
-        }
         setContentView(R.layout.activity_main);
+
+//Получаем данные из SettingsActivity
+        Intent intent = getIntent();
+        int them = intent.getIntExtra("theme",0);
+
+        if (intent.hasExtra("theme")) {
+
+            Toast.makeText(this, "Theme has been changed", Toast.LENGTH_SHORT).show();
+            setAppTheme(them);
+            recreate();
+        }
 
         //Получаем ID вью editText
         editText = findViewById(R.id.editText);

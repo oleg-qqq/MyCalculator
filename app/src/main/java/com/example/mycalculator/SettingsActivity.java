@@ -36,25 +36,19 @@ Integer CodeStyle;
             @Override
             public void onClick(View v) {
 
-                if (codeStyle == 0){
-                    Toast.makeText(context, "Now is Day Theme", Toast.LENGTH_SHORT).show();
-                    theme(codeStyle);
-                }else if (codeStyle == 1){
-                    Toast.makeText(context, "Now is Night Theme", Toast.LENGTH_SHORT).show();
-                    theme(codeStyle);
-                }
-//Сохраним настройки
+
+//Сохраним настройки и передадим в MainActivity информацию о теме + сделаем переход на главный экран
                 setAppTheme(codeStyle);
                 recreate();
+                //String cod = String.valueOf(codeStyle);
+                Intent intent = new Intent(context, MainActivity.class);
+                intent.putExtra("theme", codeStyle);
+                startActivity(intent);
+
+
+
             }
         });
     }
-    //Метод передачи темы в MainActivity и переход на главный экран
-    public void theme(int codeStyle) {
-        newTheme = codeStyle;
-        Intent runMain = new Intent(context, MainActivity.class);
-        Intent themeIntent = new Intent(context, DestinationActivity);
-        themeIntent.putExtra("themeID", newTheme);
-        startActivity(runMain);
-    }
+
 }
