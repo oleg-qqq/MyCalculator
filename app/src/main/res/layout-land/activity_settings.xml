@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral20"
+    android:orientation="vertical"
+    android:theme="@style/DayTheme"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:gravity="center"
+            android:text="Setting"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radioButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DayTheme" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButtonNight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NightTheme" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

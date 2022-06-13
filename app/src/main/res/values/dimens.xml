@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="key_text_size">20sp</dimen>
+    <dimen name="key_text_size">18sp</dimen>
     <dimen name="margin_small">2dp</dimen>
     <dimen name="TextSizeLandscape">15sp</dimen>
     <dimen name="MarginLandscape">1dp</dimen>
